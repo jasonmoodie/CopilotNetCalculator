@@ -1,0 +1,1 @@
+Please create a SQL script to insert 20 star wars characters with a columns indicating good vs. evil, age, strength and planet of birth

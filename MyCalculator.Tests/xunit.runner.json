@@ -1,0 +1,12 @@
+{
+  "parallelizeTestCollections": false,
+  "diagnosticOutput": true,
+  "reporters": [
+    {
+      "name": "console",
+      "options": {
+        "verbosity": "detailed"
+      }
+    }
+  ]
+}

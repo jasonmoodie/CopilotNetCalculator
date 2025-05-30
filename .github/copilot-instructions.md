@@ -1,0 +1,3 @@
+- Follow ASP.NET Core MVC best practices for controllers, views, and models.
+- Use clear and descriptive naming conventions for methods, variables, and classes.
+- Prefer built-in .NET libraries and methods for mathematical operations.

@@ -1,0 +1,53 @@
+@model CopilotNetCalculator.Models.CalculatorModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 1.0</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>    <div class="calc-container">
+        <div class="calc-display">
+            <span id="display">@(Model != null ? Model.Result.ToString() : "0")</span>        </div>
+        
+        <!-- Server-side calculation form for testing -->
+        <div class="server-calc" style="display: none;">
+            <form method="post" action="/Calculator/Calculate">
+                <input type="hidden" name="Operand1" value="@(Model?.Operand1 ?? 0)" />
+                <input type="hidden" name="Operand2" value="@(Model?.Operand2 ?? 0)" />
+                <input type="hidden" name="Operation" value="@(Model?.Operation ?? "")" />
+            </form>
+        </div>
+        
+        <div class="calc-title-row">
+            <span class="calc-title">TWO WAY POWER</span>
+            <span class="solar-panel">☀</span>
+        </div>
+        <div class="calc-buttons">
+            <button class="calc-btn" data-action="clear">C</button>
+            <button class="calc-btn" data-action="clear-entry">CE</button>
+            <button class="calc-btn" data-action="percentage">%</button>
+            <button class="calc-btn" data-action="divide">÷</button>
+            <button class="calc-btn" data-value="7">7</button>
+            <button class="calc-btn" data-value="8">8</button>
+            <button class="calc-btn" data-value="9">9</button>
+            <button class="calc-btn" data-action="multiply">x</button>
+            <button class="calc-btn" data-value="4">4</button>
+            <button class="calc-btn" data-value="5">5</button>
+            <button class="calc-btn" data-value="6">6</button>
+            <button class="calc-btn" data-action="subtract">-</button>
+            <button class="calc-btn" data-value="1">1</button>
+            <button class="calc-btn" data-value="2">2</button>
+            <button class="calc-btn" data-value="3">3</button>
+            <button class="calc-btn" data-action="add">+</button>
+            <button class="calc-btn" data-value="0">0</button>
+            <button class="calc-btn" data-value=".">.</button>            
+            <!-- TODO: Update button here  -->
+            <button class="calc-btn"></button>
+            <button class="calc-btn" data-action="equals">=</button>
+        </div>
+    </div>
+    <script src="~/js/calculator.js"></script>
+</body>
+</html>
